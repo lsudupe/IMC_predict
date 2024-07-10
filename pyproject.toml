@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "imc-spatial-predictions"
+version = "0.1.0"
+description = "A project to classify breast cancer using IDR Open Microscopy dataset."
+authors = ["Laura Sudupe <sudupelaura@gmail.com>"]
+readme = "README.md"
+packages = [{include = "imc_spatial_predictions"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.26.4"
+ftputil = "^5.1.0"
+scikit-image = "^0.22.0"
+jupyter = "^1.0.0"
+pandas = "^2.2.1"
+matplotlib = "^3.8.3"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+flake8 = "^7.0.0"
+flake8-pyproject = "^1.2.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    .eggs
+  | .git
+  | .hg
+  | .mypy_cache
+  | .tox
+  | .venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+
+
+
+
+
+
